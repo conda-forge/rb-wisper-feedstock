@@ -1,5 +1,5 @@
 {% set name = "wisper" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: rb-{{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
-  sha256: 6d8623c76943612e8db81862af7eb20f5a8ad631fe1857d9f7ced97e87e5222b
+  sha256: ce17bc5c3a166f241a2e6613848b025c8146fce2defba505920c1d1f3f88fae6
 
 build:
   noarch: generic
