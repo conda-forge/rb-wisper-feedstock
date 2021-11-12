@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: generic
-  number: 1
+  number: 2
   script:
     - gem install --norc -l -V --ignore-dependencies {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
@@ -21,7 +21,7 @@ requirements:
   host:
     - ruby
   run:
-    - ruby
+    - {{ pin_compatible('ruby', max_pin='x.x') }}
 
 test:
   commands:
@@ -40,6 +40,3 @@ extra:
   recipe-maintainers:
     - mxr-conda
     - sodre
-    - rluria14
-    - oblute
-    - benhuff
